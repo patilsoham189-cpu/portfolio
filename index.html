@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soham Patil | Full-Stack Java Engineer & SDE Candidate</title>
+  <meta name="description" content="Portfolio of Soham Patil - Final-Year Computer Engineering student specializing in Core Java, Spring Boot, Microservices, MySQL, and Algorithmic Problem Solving (100+ Days LeetCode)." />
+  <meta name="keywords" content="Soham Patil, Java Developer, Spring Boot, SDE, Full-Stack Developer, Pune, SPPU, LeetCode, GenBank, Software Engineer" />
+  <meta name="author" content="Soham Patil" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Soham Patil | Full-Stack Java Engineer & SDE Candidate" />
+  <meta property="og:description" content="Final-year Computer Engineering student building high-performance systems with Java 21, Spring Boot, MySQL, and Python FastAPI." />
+  <meta property="og:image" content="assets/images/avatar.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/avatar.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN with Class-based Dark Mode -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons via CDN (with inline SVG fallbacks for brand icons) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300 relative selection:bg-indigo-500 selection:text-white">
+
+  <!-- Ambient Glow Effects (Dual Mode) -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="absolute -top-40 -left-40 w-96 h-96 glow-spot-indigo rounded-full blur-3xl opacity-60 dark:opacity-70"></div>
+    <div class="absolute top-1/3 -right-40 w-96 h-96 glow-spot-violet rounded-full blur-3xl opacity-50 dark:opacity-60"></div>
+    <div class="absolute -bottom-40 left-1/3 w-96 h-96 glow-spot-emerald rounded-full blur-3xl opacity-40 dark:opacity-50"></div>
+    <div class="absolute inset-0 bg-grid-pattern opacity-60 dark:opacity-40"></div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/85 dark:bg-zinc-950/85 border-b border-slate-200/80 dark:border-zinc-800/80 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-violet-500 flex items-center justify-center text-white font-mono font-extrabold text-sm shadow-md shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+          &lt;SP/&gt;
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-base tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Soham Patil</span>
+          <span class="text-[10px] text-slate-500 dark:text-zinc-400 font-mono tracking-wider uppercase">SDE / Full-Stack Java</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-6 text-sm font-medium text-slate-600 dark:text-zinc-300">
+        <a href="#about" class="nav-link px-2.5 py-1.5 rounded-lg hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800/50 transition-colors">About</a>
+        <a href="#projects" class="nav-link px-2.5 py-1.5 rounded-lg hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800/50 transition-colors">Projects</a>
+        <a href="#leetcode" class="nav-link px-2.5 py-1.5 rounded-lg hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800/50 transition-colors">LeetCode & DSA</a>
+        <a href="#skills" class="nav-link px-2.5 py-1.5 rounded-lg hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800/50 transition-colors">Skills</a>
+        <a href="#education" class="nav-link px-2.5 py-1.5 rounded-lg hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800/50 transition-colors">Education</a>
+        <a href="#contact" class="nav-link px-2.5 py-1.5 rounded-lg hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800/50 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Cluster -->
+      <div class="hidden sm:flex items-center space-x-2.5">
+        <!-- Interactive Terminal Trigger -->
+        <button class="open-terminal-btn p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800/80 dark:hover:bg-zinc-700/80 text-slate-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all border border-slate-200 dark:border-zinc-700/60" title="Open Interactive CLI Terminal">
+          <i data-lucide="terminal" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Day / Night Theme Toggle -->
+        <button class="theme-toggle-btn p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800/80 dark:hover:bg-zinc-700/80 text-slate-700 dark:text-zinc-300 hover:text-amber-500 transition-all border border-slate-200 dark:border-zinc-700/60" title="Toggle Day/Night Mode">
+          <!-- Sun Icon (shown in Day Mode) -->
+          <svg class="theme-sun-icon w-4 h-4 text-amber-500 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (shown in Dark Mode) -->
+          <svg class="theme-moon-icon w-4 h-4 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Download Resume Button -->
+        <a href="assets/docs/Soham_Patil_Resume.pdf" download="Soham_Patil_Resume.pdf" class="inline-flex items-center space-x-2 px-3.5 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white text-xs font-semibold shadow-md shadow-indigo-600/20 transition-all transform hover:-translate-y-0.5">
+          <i data-lucide="file-down" class="w-4 h-4"></i>
+          <span>Resume</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center space-x-2 md:hidden">
+        <button class="theme-toggle-btn p-2 rounded-lg bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300">
+          <svg class="theme-sun-icon w-4 h-4 text-amber-500 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-moon-icon w-4 h-4 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button id="mobile-menu-btn" class="p-2 rounded-lg bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white focus:outline-none">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-5 space-y-2 border-b border-slate-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl">
+      <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800">About</a>
+      <a href="#projects" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800">Projects</a>
+      <a href="#leetcode" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800">LeetCode & DSA</a>
+      <a href="#skills" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800">Skills</a>
+      <a href="#education" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800">Education</a>
+      <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800">Contact</a>
+      <div class="pt-3 border-t border-slate-200 dark:border-zinc-800 flex items-center justify-between">
+        <button class="open-terminal-btn flex items-center space-x-2 text-sm text-emerald-600 dark:text-emerald-400 font-mono font-semibold">
+          <i data-lucide="terminal" class="w-4 h-4"></i>
+          <span>Launch CLI</span>
+        </button>
+        <a href="assets/docs/Soham_Patil_Resume.pdf" download class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-indigo-600 text-white text-xs font-semibold rounded-lg">
+          <i data-lucide="file-down" class="w-3.5 h-3.5"></i>
+          <span>Download Resume</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left: Text Bio & Pitch -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Status Pill -->
+          <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Available for SDE / Full-Stack Opportunities · Pune / Remote</span>
+          </div>
+
+          <!-- Main Heading -->
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+              Hi, I'm <span class="bg-gradient-to-r from-indigo-600 via-indigo-500 to-violet-600 dark:from-indigo-400 dark:via-indigo-300 dark:to-violet-400 bg-clip-text text-transparent">Soham Patil</span>
+            </h1>
+            <!-- Dynamic Typewriter Line -->
+            <div class="h-8 sm:h-9 flex items-center justify-center lg:justify-start font-mono text-lg sm:text-xl text-slate-700 dark:text-zinc-300">
+              <span class="text-indigo-600 dark:text-indigo-400 mr-2 font-bold">&gt;</span>
+              <span id="typewriter-text" class="text-indigo-600 dark:text-indigo-300 font-semibold"></span>
+              <span class="typewriter-cursor"></span>
+            </div>
+          </div>
+
+          <!-- Elevator Pitch -->
+          <p class="text-slate-600 dark:text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Final-year Computer Engineering student specializing in <strong class="text-slate-900 dark:text-zinc-200">Full-Stack Java</strong> development. Focused on building real-world, concurrent systems from scratch with <strong class="text-indigo-600 dark:text-indigo-300">Spring Boot</strong>, <strong class="text-indigo-600 dark:text-indigo-300">MySQL</strong>, and <strong class="text-indigo-600 dark:text-indigo-300">Microservices</strong>, backed by consistent algorithmic problem-solving with over <strong class="text-emerald-600 dark:text-emerald-400">100+ days active LeetCode streak</strong>.
+          </p>
+
+          <!-- Action CTA Cluster -->
+          <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            <a href="#projects" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/25 transition-all transform hover:-translate-y-0.5">
+              <span>View GenBank Project</span>
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            </a>
+
+            <a href="assets/docs/Soham_Patil_Resume.pdf" target="_blank" class="inline-flex items-center space-x-2 px-5 py-3 rounded-xl bg-white dark:bg-zinc-800 text-slate-800 dark:text-zinc-200 font-semibold text-sm border border-slate-200 dark:border-zinc-700 hover:bg-slate-50 dark:hover:bg-zinc-700 transition-all transform hover:-translate-y-0.5 shadow-sm">
+              <i data-lucide="file-text" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+              <span>View Resume</span>
+            </a>
+
+            <button class="open-terminal-btn inline-flex items-center space-x-2 px-4 py-3 rounded-xl bg-slate-900 text-emerald-400 hover:bg-black font-mono text-xs shadow-md transition-all">
+              <i data-lucide="terminal" class="w-4 h-4"></i>
+              <span>./interactive-cli</span>
+            </button>
+          </div>
+
+          <!-- Socials & Verified Profiles Bar (With Guaranteed Inline SVGs) -->
+          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+            
+            <!-- GitHub Link (Only GenBank focus) -->
+            <a href="https://github.com/patilsoham189-cpu" target="_blank" class="inline-flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-slate-400 dark:hover:border-zinc-700 text-xs font-semibold text-slate-800 dark:text-zinc-200 hover:text-indigo-600 dark:hover:text-white shadow-sm transition-all">
+              <!-- Inline GitHub SVG -->
+              <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <!-- LinkedIn Link -->
+            <a href="https://linkedin.com/in/soham-patil-cs" target="_blank" class="inline-flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-indigo-500 text-xs font-semibold text-slate-800 dark:text-zinc-200 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm transition-all">
+              <!-- Inline LinkedIn SVG -->
+              <svg class="w-4 h-4 fill-[#0A66C2] flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.97 0 1.75-.79 1.75-1.76s-.78-1.75-1.75-1.75a1.75 1.75 0 0 0-1.75 1.75c0 .97.78 1.76 1.75 1.76m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <!-- LeetCode Link -->
+            <a href="https://leetcode.com/u/Soham416/" target="_blank" class="inline-flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-amber-500 text-xs font-semibold text-slate-800 dark:text-zinc-200 hover:text-amber-500 shadow-sm transition-all">
+              <!-- Inline LeetCode SVG -->
+              <svg class="w-4 h-4 fill-[#FFA116] flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.815 3.663 5.92 5.92 0 0 0 3.21-.497 5.973 5.973 0 0 0 1.956-1.498l3.18-3.41 1.97-2.112a1.378 1.378 0 0 0-2.016-1.879l-1.97 2.11-3.18 3.414a3.174 3.174 0 0 1-1.043.798 3.14 3.14 0 0 1-1.706.265 3.155 3.155 0 0 1-2.558-1.947 3.1 3.1 0 0 1-.186-.541 2.94 2.94 0 0 1-.033-1.258 2.8 2.8 0 0 1 .643-1.12l3.854-4.125 5.405-5.787A1.378 1.378 0 0 0 13.483 0zm-2.88 8.44a1.376 1.376 0 0 0-1.377 1.376v.018a1.376 1.376 0 0 0 1.377 1.376h8.286a1.376 1.376 0 0 0 1.377-1.376v-.018a1.376 1.376 0 0 0-1.377-1.376H10.603z"/>
+              </svg>
+              <span>LeetCode</span>
+              <span class="text-[10px] px-1.5 py-0.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded font-semibold">100d Badge</span>
+            </a>
+
+            <!-- HackerRank Link -->
+            <a href="https://hackerrank.com/profile/patilsoham189" target="_blank" class="inline-flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-emerald-500 text-xs font-semibold text-slate-800 dark:text-zinc-200 hover:text-emerald-500 shadow-sm transition-all">
+              <!-- Inline HackerRank SVG -->
+              <svg class="w-4 h-4 fill-[#2EC866] flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 0a12 12 0 1 0 12 12A12.013 12.013 0 0 0 12 0zm3.844 16.32a.6.6 0 0 1-.6.6h-1.68a.6.6 0 0 1-.6-.6v-2.88h-1.928v2.88a.6.6 0 0 1-.6.6h-1.68a.6.6 0 0 1-.6-.6V7.68a.6.6 0 0 1 .6-.6h1.68a.6.6 0 0 1 .6.6v2.88h1.928V7.68a.6.6 0 0 1 .6-.6h1.68a.6.6 0 0 1 .6.6v8.64z"/>
+              </svg>
+              <span>HackerRank</span>
+              <span class="text-[10px] px-1.5 py-0.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded font-semibold">3★ Java</span>
+            </a>
+
+            <!-- Copy Email Button -->
+            <button data-copy="patilsoham189@gmail.com" class="inline-flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 text-xs font-semibold text-slate-800 dark:text-zinc-200 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm transition-all" title="Click to copy email">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>patilsoham189@gmail.com</span>
+              <i data-lucide="copy" class="w-3 h-3 text-slate-400 dark:text-zinc-500"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right: Profile Card with Original HD Portrait & Proof Badges -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-72 sm:w-80 group">
+            
+            <!-- Radiant Background Glow behind Avatar -->
+            <div class="absolute -inset-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-emerald-500 rounded-3xl blur-xl opacity-35 dark:opacity-35 group-hover:opacity-60 transition-opacity duration-500"></div>
+
+            <!-- Avatar Container Card -->
+            <div class="relative rounded-2xl overflow-hidden glass-panel border border-slate-200/90 dark:border-white/10 shadow-2xl p-3">
+              <div class="relative rounded-xl overflow-hidden aspect-square bg-slate-900">
+                <!-- User Provided Original High-Resolution Photo (Zero Quality Loss) -->
+                <img src="assets/images/avatar.jpg" alt="Soham Patil - Full-Stack Java Engineer" class="avatar-hd w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-3 right-3 text-left">
+                  <div class="flex items-center space-x-1.5 text-xs text-emerald-400 font-semibold mb-0.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>Ready for Placement & Internships</span>
+                  </div>
+                  <p class="text-white font-bold text-sm">Soham Patil</p>
+                  <p class="text-zinc-300 text-xs">Pune, Maharashtra, India</p>
+                </div>
+              </div>
+
+              <!-- Quick Info Footnote under Avatar -->
+              <div class="pt-3 px-1 flex items-center justify-between text-xs text-slate-600 dark:text-zinc-400 font-mono">
+                <span class="flex items-center space-x-1">
+                  <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+                  <span>SPPU 2027</span>
+                </span>
+                <span class="text-emerald-600 dark:text-emerald-400 font-bold">CGPA: 8.23 / 10</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 1: LeetCode 100 Days Badge -->
+            <div class="absolute -bottom-6 -left-6 glass-card p-3 rounded-xl flex items-center space-x-3 shadow-xl border border-slate-200 dark:border-white/10 max-w-[210px] animate-pulse-subtle bg-white/95 dark:bg-zinc-900/90">
+              <img src="assets/images/badge-100-days.png" alt="LeetCode 100 Days Badge" class="w-10 h-10 object-contain rounded-lg flex-shrink-0" />
+              <div class="text-left">
+                <p class="text-[11px] font-bold text-slate-900 dark:text-white">100 Days Badge</p>
+                <p class="text-[10px] text-slate-500 dark:text-zinc-400 font-medium">81-Day Streak 2026</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Java 21 & Spring Boot -->
+            <div class="absolute -top-5 -right-6 glass-card px-3.5 py-2.5 rounded-xl flex items-center space-x-2.5 shadow-xl border border-slate-200 dark:border-white/10 bg-white/95 dark:bg-zinc-900/90">
+              <div class="w-7 h-7 rounded-lg bg-orange-500/20 text-orange-500 flex items-center justify-center font-bold text-xs">
+                ☕
+              </div>
+              <div class="text-left">
+                <p class="text-[11px] font-bold text-slate-900 dark:text-white">Java 21 & Spring</p>
+                <p class="text-[10px] text-slate-500 dark:text-zinc-400 font-medium">GenBank Platform</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       KEY METRICS & PROOF BAR
+       ========================================================================== -->
+  <section class="py-8 border-y border-slate-200/80 dark:border-zinc-800/80 bg-slate-100/60 dark:bg-zinc-900/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Metric 1: LeetCode Streak -->
+        <div class="glass-card p-5 rounded-2xl text-center bg-white dark:bg-zinc-900/60 border border-slate-200 dark:border-zinc-800">
+          <div class="inline-flex p-2 rounded-xl bg-amber-500/10 text-amber-500 mb-2">
+            <i data-lucide="flame" class="w-5 h-5"></i>
+          </div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">100+ Days</div>
+          <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1 font-medium">LeetCode 2026 Badge (81d Max Streak)</p>
+        </div>
+
+        <!-- Metric 2: Algorithmic Challenges -->
+        <div class="glass-card p-5 rounded-2xl text-center bg-white dark:bg-zinc-900/60 border border-slate-200 dark:border-zinc-800">
+          <div class="inline-flex p-2 rounded-xl bg-indigo-500/10 text-indigo-500 mb-2">
+            <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+          </div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">55+ Solved</div>
+          <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1 font-medium">Core DSA Challenges in Java</p>
+        </div>
+
+        <!-- Metric 3: Academic CGPA -->
+        <div class="glass-card p-5 rounded-2xl text-center bg-white dark:bg-zinc-900/60 border border-slate-200 dark:border-zinc-800">
+          <div class="inline-flex p-2 rounded-xl bg-emerald-500/10 text-emerald-500 mb-2">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">8.23 CGPA</div>
+          <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1 font-medium">B.E. Computer Engineering (SPPU)</p>
+        </div>
+
+        <!-- Metric 4: HackerRank Star Badges -->
+        <div class="glass-card p-5 rounded-2xl text-center bg-white dark:bg-zinc-900/60 border border-slate-200 dark:border-zinc-800">
+          <div class="inline-flex p-2 rounded-xl bg-violet-500/10 text-violet-500 mb-2">
+            <i data-lucide="star" class="w-5 h-5"></i>
+          </div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">3-Star Java</div>
+          <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1 font-medium">HackerRank Certified Problem Solver</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT ME SECTION
+       ========================================================================== -->
+  <section id="about" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-bold mb-2">// Engineering Mindset</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">About Me & Philosophy</h3>
+        <p class="text-slate-600 dark:text-zinc-400 mt-3 text-sm sm:text-base">Understanding systems from first principles — building practical software rather than following tutorial clones.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Narrative -->
+        <div class="lg:col-span-7 space-y-5 text-slate-700 dark:text-zinc-300 leading-relaxed text-sm sm:text-base">
+          <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-4 bg-white dark:bg-zinc-900/60">
+            <h4 class="text-xl font-bold text-slate-900 dark:text-white flex items-center space-x-2">
+              <i data-lucide="cpu" class="w-5 h-5 text-indigo-600 dark:text-indigo-400"></i>
+              <span>Driven by How Software Truly Works</span>
+            </h4>
+            <p>
+              I am a final-year Computer Engineering student at <strong class="text-slate-900 dark:text-white">Dr. D. Y. Patil College of Engineering & Innovation (Savitribai Phule Pune University)</strong>. I genuinely enjoy diving into complex software challenges, understanding backend systems from the ground up, and building high-reliability architectures.
+            </p>
+            <p>
+              Rather than copying surface-level templates, I take a hands-on approach: I architected <strong class="text-indigo-600 dark:text-indigo-400">GenBank</strong>, a full-stack enterprise banking application. In it, I tackled real production concerns: implementing <span class="text-emerald-700 dark:text-emerald-400 font-mono text-xs px-1.5 py-0.5 bg-emerald-50 dark:bg-emerald-500/10 rounded font-semibold">@Version</span> optimistic locking for race conditions, role-based access control (RBAC), and decoupling sensitive OTP verification into an isolated Python FastAPI microservice.
+            </p>
+            <p>
+              Simultaneously, I practice daily algorithmic problem solving with <strong class="text-slate-900 dark:text-white">Java 21</strong>, having earned the <span class="text-amber-600 dark:text-amber-400 font-bold">100 Days Badge 2026 on LeetCode</span> with an 81-day continuous streak. I am actively looking for an internship or entry-level Software Development Engineer (SDE) / Full-Stack role where I can immediately create impact.
+            </p>
+          </div>
+
+          <!-- Highlight Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="glass-card p-5 rounded-xl border-l-4 border-l-indigo-500 bg-white dark:bg-zinc-900/60">
+              <h5 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Architecture & Reliability</h5>
+              <p class="text-xs text-slate-600 dark:text-zinc-400">Deep believer in automated testing with JUnit 5 and Mockito, RESTful standards, and double-entry ledger bookkeeping.</p>
+            </div>
+            <div class="glass-card p-5 rounded-xl border-l-4 border-l-emerald-500 bg-white dark:bg-zinc-900/60">
+              <h5 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Relational Schema Design</h5>
+              <p class="text-xs text-slate-600 dark:text-zinc-400">Strict normalization (BCNF/3NF), indexing optimizations, and transactional ACID compliance in MySQL.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Fast Candidate Facts Table -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="glass-card p-6 sm:p-7 rounded-2xl space-y-5 bg-white dark:bg-zinc-900/60">
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white flex items-center space-x-2">
+              <i data-lucide="clipboard-list" class="w-5 h-5 text-indigo-600 dark:text-indigo-400"></i>
+              <span>Quick Candidate Facts</span>
+            </h4>
+
+            <div class="space-y-3.5 text-sm">
+              <div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-zinc-800">
+                <span class="text-slate-500 dark:text-zinc-400">Degree</span>
+                <span class="font-semibold text-slate-900 dark:text-white text-right">B.E. Computer Engineering</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-zinc-800">
+                <span class="text-slate-500 dark:text-zinc-400">University</span>
+                <span class="font-semibold text-slate-900 dark:text-white text-right">SPPU, Pune</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-zinc-800">
+                <span class="text-slate-500 dark:text-zinc-400">Graduation</span>
+                <span class="font-semibold text-slate-900 dark:text-white">2027 (Final Year)</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-zinc-800">
+                <span class="text-slate-500 dark:text-zinc-400">Cumulative GPA</span>
+                <span class="font-bold text-emerald-600 dark:text-emerald-400">8.23 / 10.0</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-zinc-800">
+                <span class="text-slate-500 dark:text-zinc-400">Location</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Pune, Maharashtra</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-zinc-800">
+                <span class="text-slate-500 dark:text-zinc-400">Target Roles</span>
+                <span class="font-semibold text-indigo-600 dark:text-indigo-400 text-right">SDE, Java Full-Stack Intern/Grad</span>
+              </div>
+              <div class="flex justify-between items-center py-2">
+                <span class="text-slate-500 dark:text-zinc-400">Availability</span>
+                <span class="inline-flex items-center space-x-1.5 text-xs px-2.5 py-1 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 rounded-md font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span>Immediate Availability</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Direct Contact Button -->
+            <div class="pt-2">
+              <a href="#contact" class="w-full inline-flex items-center justify-center space-x-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-slate-800 dark:text-zinc-200 font-medium text-xs border border-slate-200 dark:border-zinc-700 transition-all">
+                <i data-lucide="send" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+                <span>Get in Touch for Opportunities</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED PROJECTS SECTION (GENBANK SHOWCASE)
+       ========================================================================== -->
+  <section id="projects" class="py-20 bg-slate-100/60 dark:bg-zinc-900/30 border-t border-slate-200/80 dark:border-zinc-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-bold mb-2">// Production-Grade Architecture</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Featured Project</h3>
+        <p class="text-slate-600 dark:text-zinc-400 mt-2 text-sm sm:text-base">An enterprise banking platform built from scratch with concurrency safety, role-based security, and microservices.</p>
+      </div>
+
+      <!-- ====================================================================
+           GENBANK (FLAGSHIP SHOWCASE)
+           ==================================================================== -->
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 lg:p-10 border border-indigo-500/40 relative overflow-hidden transition-all duration-300 bg-white/95 dark:bg-zinc-950/85">
+        
+        <!-- Top Tag Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+          <div class="flex items-center space-x-2">
+            <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/20 text-xs font-bold uppercase tracking-wider">
+              Flagship Project
+            </span>
+            <span class="px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-semibold">
+              Core Banking Engine
+            </span>
+          </div>
+
+          <!-- Action Links -->
+          <div class="flex items-center space-x-3">
+            <button class="open-genbank-arch-btn inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-slate-800 dark:text-zinc-200 text-xs font-semibold border border-slate-200 dark:border-zinc-700 transition-all">
+              <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+              <span>View System Architecture</span>
+            </button>
+            <a href="https://github.com/patilsoham189-cpu/GenBank" target="_blank" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-md shadow-indigo-600/20 transition-all">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>GitHub Repository</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Info -->
+          <div class="lg:col-span-7 space-y-4">
+            <h4 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              GenBank: Core Banking & NetBanking Enterprise Platform
+            </h4>
+            <p class="text-slate-600 dark:text-zinc-300 text-sm sm:text-base leading-relaxed">
+              A mission-critical financial web platform engineered to simulate end-to-end modern banking operations, featuring separate customer self-service NetBanking and back-office administrative portals with strict Role-Based Access Control (RBAC).
+            </p>
+
+            <!-- Engineering Bullet Points -->
+            <div class="space-y-3 pt-2">
+              <div class="flex items-start space-x-3">
+                <div class="p-1 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 mt-1 flex-shrink-0">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-700 dark:text-zinc-300">
+                  <strong class="text-slate-900 dark:text-white">Double-Entry Ledger & Concurrency Safety:</strong> Logged every balance transaction with double-entry records and utilized JPA <span class="text-indigo-600 dark:text-indigo-300 font-mono font-semibold">@Version</span> optimistic locking to prevent race conditions during simultaneous fund transfers.
+                </p>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <div class="p-1 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 mt-1 flex-shrink-0">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-700 dark:text-zinc-300">
+                  <strong class="text-slate-900 dark:text-white">Decoupled Microservice OTP Engine:</strong> Built and integrated a dedicated Python FastAPI microservice invoked over REST for secure, time-bounded One-Time-Password (OTP) generation and verification.
+                </p>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <div class="p-1 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 mt-1 flex-shrink-0">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-700 dark:text-zinc-300">
+                  <strong class="text-slate-900 dark:text-white">Enterprise Security Model:</strong> Hardened authentication utilizing Spring Security with BCrypt cryptographic password hashing, role segregation, and CSRF token protections.
+                </p>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <div class="p-1 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 mt-1 flex-shrink-0">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-700 dark:text-zinc-300">
+                  <strong class="text-slate-900 dark:text-white">23+ Automated Unit & Integration Tests:</strong> Authored 23 test suites using JUnit 5 and Mockito verifying transaction atomicity, boundary limits, and rollback guarantees.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tech Stack Badges -->
+            <div class="pt-3 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-xs font-mono border border-slate-200 dark:border-zinc-700/60 font-semibold">Java 21</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-xs font-mono border border-slate-200 dark:border-zinc-700/60 font-semibold">Spring Boot 4</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-xs font-mono border border-slate-200 dark:border-zinc-700/60 font-semibold">MySQL</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-xs font-mono border border-slate-200 dark:border-zinc-700/60 font-semibold">Python FastAPI</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-xs font-mono border border-slate-200 dark:border-zinc-700/60 font-semibold">Spring Security</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-xs font-mono border border-slate-200 dark:border-zinc-700/60 font-semibold">JPA / Hibernate</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-xs font-mono border border-slate-200 dark:border-zinc-700/60 font-semibold">JUnit 5</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-xs font-mono border border-slate-200 dark:border-zinc-700/60 font-semibold">Mockito</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-xs font-mono border border-slate-200 dark:border-zinc-700/60 font-semibold">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Right Visual Architecture Card -->
+          <div class="lg:col-span-5 bg-slate-900 text-zinc-100 rounded-2xl p-5 border border-slate-800 shadow-xl space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-zinc-800">
+              <span class="text-xs font-mono text-zinc-400">ARCHITECTURE OVERVIEW</span>
+              <span class="text-[11px] font-mono text-emerald-400 font-bold">23 Passing Tests</span>
+            </div>
+
+            <!-- Architecture Diagram Snippet -->
+            <div class="space-y-2.5 font-mono text-xs">
+              <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                  <span class="text-zinc-200 font-bold">Client / NetBanking UI</span>
+                </div>
+                <span class="text-[10px] text-zinc-400">Web Browser / Mobile</span>
+              </div>
+
+              <div class="text-center text-zinc-500 text-xs font-bold">↓ REST / HTTPS (CSRF + BCrypt Auth)</div>
+
+              <div class="p-3 rounded-lg bg-indigo-950/60 border border-indigo-500/40 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-indigo-300 font-bold">Spring Boot Core Banking Engine</span>
+                  <span class="text-[10px] text-indigo-400">Java 21</span>
+                </div>
+                <p class="text-[11px] text-zinc-400">RBAC Security · Double-Entry Ledger · Optimistic Lock</p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 pt-1">
+                <div class="p-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-left">
+                  <span class="text-emerald-400 text-[11px] font-bold block">FastAPI OTP Service</span>
+                  <span class="text-[10px] text-zinc-400">Decoupled REST</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-left">
+                  <span class="text-amber-400 text-[11px] font-bold block">MySQL Database</span>
+                  <span class="text-[10px] text-zinc-400">ACID Transactions</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 text-center">
+              <button class="open-genbank-arch-btn text-xs text-indigo-400 hover:text-indigo-300 underline font-medium">
+                Click to inspect full architecture specs & schema &rarr;
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LEETCODE & COMPETITIVE PROGRAMMING SHOWCASE
+       ========================================================================== -->
+  <section id="leetcode" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-amber-600 dark:text-amber-400 font-bold mb-2">// Proven Consistency</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Algorithmic Problem Solving & Badges</h3>
+        <p class="text-slate-600 dark:text-zinc-400 mt-3 text-sm sm:text-base">Real metrics and verified badges demonstrating continuous daily dedication to Data Structures and Algorithms.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Left: LeetCode Deep Dive Card -->
+        <div class="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-zinc-800/80 space-y-6 flex flex-col justify-between bg-white dark:bg-zinc-950/80">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-zinc-800">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.815 3.663 5.92 5.92 0 0 0 3.21-.497 5.973 5.973 0 0 0 1.956-1.498l3.18-3.41 1.97-2.112a1.378 1.378 0 0 0-2.016-1.879l-1.97 2.11-3.18 3.414a3.174 3.174 0 0 1-1.043.798 3.14 3.14 0 0 1-1.706.265 3.155 3.155 0 0 1-2.558-1.947 3.1 3.1 0 0 1-.186-.541 2.94 2.94 0 0 1-.033-1.258 2.8 2.8 0 0 1 .643-1.12l3.854-4.125 5.405-5.787A1.378 1.378 0 0 0 13.483 0zm-2.88 8.44a1.376 1.376 0 0 0-1.377 1.376v.018a1.376 1.376 0 0 0 1.377 1.376h8.286a1.376 1.376 0 0 0 1.377-1.376v-.018a1.376 1.376 0 0 0-1.377-1.376H10.603z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-lg">LeetCode Profile</h4>
+                  <a href="https://leetcode.com/u/Soham416/" target="_blank" class="text-xs text-amber-600 dark:text-amber-400 hover:underline font-mono font-bold">@Soham416 &rarr;</a>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-mono text-xs font-semibold">
+                Global Rank: 2,638,551
+              </span>
+            </div>
+
+            <!-- Solved Progress Breakdown -->
+            <div class="grid grid-cols-3 gap-4 my-6 text-center">
+              <div class="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20">
+                <span class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">46</span>
+                <p class="text-xs text-slate-600 dark:text-zinc-400 font-medium mt-0.5">Easy Solved</p>
+                <div class="w-full bg-slate-200 dark:bg-zinc-800 h-1.5 rounded-full mt-2 overflow-hidden">
+                  <div class="bg-emerald-500 h-full rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20">
+                <span class="text-2xl font-extrabold text-amber-600 dark:text-amber-400">8</span>
+                <p class="text-xs text-slate-600 dark:text-zinc-400 font-medium mt-0.5">Medium Solved</p>
+                <div class="w-full bg-slate-200 dark:bg-zinc-800 h-1.5 rounded-full mt-2 overflow-hidden">
+                  <div class="bg-amber-500 h-full rounded-full" style="width: 35%"></div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-rose-50 dark:bg-rose-500/10 border border-rose-200 dark:border-rose-500/20">
+                <span class="text-2xl font-extrabold text-rose-600 dark:text-rose-400">1</span>
+                <p class="text-xs text-slate-600 dark:text-zinc-400 font-medium mt-0.5">Hard Solved</p>
+                <div class="w-full bg-slate-200 dark:bg-zinc-800 h-1.5 rounded-full mt-2 overflow-hidden">
+                  <div class="bg-rose-500 h-full rounded-full" style="width: 15%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity Highlights -->
+            <div class="space-y-3 text-sm">
+              <div class="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+                <span class="text-slate-600 dark:text-zinc-400 flex items-center space-x-2">
+                  <i data-lucide="zap" class="w-4 h-4 text-amber-500"></i>
+                  <span>Maximum Daily Streak</span>
+                </span>
+                <span class="font-bold text-slate-900 dark:text-white font-mono">81 Days Continuous</span>
+              </div>
+
+              <div class="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+                <span class="text-slate-600 dark:text-zinc-400 flex items-center space-x-2">
+                  <i data-lucide="calendar" class="w-4 h-4 text-indigo-500"></i>
+                  <span>Total Active Days</span>
+                </span>
+                <span class="font-bold text-slate-900 dark:text-white font-mono">118 Days Active</span>
+              </div>
+
+              <div class="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800">
+                <span class="text-slate-600 dark:text-zinc-400 flex items-center space-x-2">
+                  <i data-lucide="check-check" class="w-4 h-4 text-emerald-500"></i>
+                  <span>Annual Submissions</span>
+                </span>
+                <span class="font-bold text-slate-900 dark:text-white font-mono">174+ Submissions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct LeetCode CTA -->
+          <div class="pt-4">
+            <a href="https://leetcode.com/u/Soham416/" target="_blank" class="w-full inline-flex items-center justify-center space-x-2 px-4 py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-500/30 text-xs font-semibold transition-all">
+              <span>Inspect Live LeetCode Profile</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Official Badges Showcase -->
+        <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
+          
+          <!-- LeetCode 100 Days Badge Card -->
+          <div class="glass-panel rounded-3xl p-6 border border-slate-200 dark:border-zinc-800/80 space-y-4 bg-white dark:bg-zinc-950/80">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase tracking-wider text-amber-600 dark:text-amber-400 font-bold">LeetCode Official Award</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-mono font-semibold">Awarded 2026</span>
+            </div>
+
+            <div class="flex items-center space-x-5">
+              <div class="w-24 h-24 rounded-2xl bg-zinc-950 p-2 border border-zinc-800 flex items-center justify-center flex-shrink-0 shadow-lg">
+                <img src="assets/images/badge-100-days.png" alt="LeetCode 100 Days Badge" class="w-full h-full object-contain transform hover:scale-110 transition-transform" />
+              </div>
+              <div>
+                <h5 class="text-lg font-bold text-slate-900 dark:text-white">100 Days Badge 2026</h5>
+                <p class="text-xs text-slate-600 dark:text-zinc-400 mt-1 leading-relaxed">
+                  Conferred by LeetCode for solving algorithmic problems for 100+ days with unmatched consistency and time-space optimization.
+                </p>
+                <div class="mt-2 text-[11px] text-amber-600 dark:text-amber-400 font-mono font-bold">
+                  ★ Also Awarded: 50 Days Badge 2026
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HackerRank Star Badges Card -->
+          <div class="glass-panel rounded-3xl p-6 border border-slate-200 dark:border-zinc-800/80 space-y-4 bg-white dark:bg-zinc-950/80">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">HackerRank Certifications</span>
+              <a href="https://hackerrank.com/profile/patilsoham189" target="_blank" class="text-xs text-emerald-600 dark:text-emerald-400 hover:underline font-mono font-bold">@patilsoham189 &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Java 3-Star Badge -->
+              <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 flex items-center space-x-3">
+                <img src="assets/images/badge-hackerrank-java.png" alt="HackerRank Java 3-Star Badge" class="w-14 h-14 object-contain rounded-lg flex-shrink-0" />
+                <div>
+                  <span class="text-xs font-bold text-slate-900 dark:text-white block">Java 3-Star</span>
+                  <span class="text-[10px] text-slate-500 dark:text-zinc-400">Object-Oriented Problem Solving</span>
+                </div>
+              </div>
+
+              <!-- Python 1-Star Badge -->
+              <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 flex items-center space-x-3">
+                <img src="assets/images/badge-hackerrank-python.png" alt="HackerRank Python 1-Star Badge" class="w-14 h-14 object-contain rounded-lg flex-shrink-0" />
+                <div>
+                  <span class="text-xs font-bold text-slate-900 dark:text-white block">Python 1-Star</span>
+                  <span class="text-[10px] text-slate-500 dark:text-zinc-400">Scripting & REST Microservices</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TECHNICAL SKILLS TAXONOMY
+       ========================================================================== -->
+  <section id="skills" class="py-20 bg-slate-100/60 dark:bg-zinc-900/30 border-t border-slate-200/80 dark:border-zinc-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-bold mb-2">// Technical Capabilities</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Skills & Technologies</h3>
+        <p class="text-slate-600 dark:text-zinc-400 mt-3 text-sm sm:text-base">Categorized breakdown of programming languages, enterprise frameworks, databases, and testing tools.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Category 1: Languages & Core CS -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 bg-white dark:bg-zinc-900/60">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+            <i data-lucide="code" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base">Languages & Core</h4>
+            <p class="text-xs text-slate-500 dark:text-zinc-400 mt-1">Foundation of robust engineering</p>
+          </div>
+          <div class="space-y-2 pt-1">
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Core Java (Java 21)</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-50 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 font-mono font-semibold">Advanced</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Data Structures & DSA</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">Proficient</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">OOP & Design Principles</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-50 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 font-mono font-semibold">Advanced</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Python</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 dark:bg-zinc-800 text-slate-700 dark:text-zinc-400 font-mono font-semibold">Working</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">JavaScript, HTML5, CSS3</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 dark:bg-zinc-800 text-slate-700 dark:text-zinc-400 font-mono font-semibold">Frontend</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Backend & Frameworks -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 bg-white dark:bg-zinc-900/60">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
+            <i data-lucide="server" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base">Backend & APIs</h4>
+            <p class="text-xs text-slate-500 dark:text-zinc-400 mt-1">Enterprise services & architecture</p>
+          </div>
+          <div class="space-y-2 pt-1">
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Spring Boot (v4)</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">Primary</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Spring Security & RBAC</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">BCrypt/CSRF</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">JPA / Hibernate ORM</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">Proficient</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">RESTful API Architecture</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">Advanced</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Python FastAPI</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 dark:bg-zinc-800 text-slate-700 dark:text-zinc-400 font-mono font-semibold">Microservices</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Databases & Storage -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 bg-white dark:bg-zinc-900/60">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+            <i data-lucide="database" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base">Databases & Storage</h4>
+            <p class="text-xs text-slate-500 dark:text-zinc-400 mt-1">High-integrity data modeling</p>
+          </div>
+          <div class="space-y-2 pt-1">
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">MySQL Relational DB</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 font-mono font-semibold">Advanced</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Optimistic Locking (@Version)</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 font-mono font-semibold">Concurrency</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Normalization (3NF / BCNF)</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 font-mono font-semibold">Clean Schema</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Indexing & Query Optimization</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 font-mono font-semibold">Performance</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">ACID Transactions</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 font-mono font-semibold">Zero-Loss</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Testing & Dev Tools -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 bg-white dark:bg-zinc-900/60">
+          <div class="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-600 dark:text-violet-400 flex items-center justify-center font-bold">
+            <i data-lucide="check-square" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base">Testing & Tooling</h4>
+            <p class="text-xs text-slate-500 dark:text-zinc-400 mt-1">Verification and workflow</p>
+          </div>
+          <div class="space-y-2 pt-1">
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">JUnit 5</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-violet-50 dark:bg-violet-500/20 text-violet-700 dark:text-violet-300 font-mono font-semibold">Unit Testing</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Mockito</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-violet-50 dark:bg-violet-500/20 text-violet-700 dark:text-violet-300 font-mono font-semibold">Mocking</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Git & GitHub</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-violet-50 dark:bg-violet-500/20 text-violet-700 dark:text-violet-300 font-mono font-semibold">Version Ctrl</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Maven & Build Tools</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 dark:bg-zinc-800 text-slate-700 dark:text-zinc-400 font-mono font-semibold">Dependency</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-slate-800 dark:text-zinc-200">Postman & Linux CLI</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 dark:bg-zinc-800 text-slate-700 dark:text-zinc-400 font-mono font-semibold">Testing/CLI</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EDUCATION & TIMELINE (MATCHING SSC & HSC EXACTLY)
+       ========================================================================== -->
+  <section id="education" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-bold mb-2">// Academic Background</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Education & Milestones</h3>
+        <p class="text-slate-600 dark:text-zinc-400 mt-3 text-sm sm:text-base">Consistently strong academic performance paired with self-directed software development.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+        
+        <!-- Milestone 1: Bachelor of Engineering -->
+        <div class="glass-card p-6 sm:p-7 rounded-2xl relative pl-8 sm:pl-10 border-l-4 border-l-indigo-500 bg-white dark:bg-zinc-900/60">
+          <div class="absolute -left-3 top-6 w-5 h-5 rounded-full bg-indigo-600 border-4 border-slate-50 dark:border-zinc-950"></div>
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+            <span class="text-xs font-mono text-indigo-600 dark:text-indigo-400 font-semibold">JULY 2023 – 2027 (FINAL YEAR)</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 font-mono font-bold text-xs">
+              CGPA: 8.23 / 10.0
+            </span>
+          </div>
+          <h4 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+            Bachelor of Engineering in Computer Engineering
+          </h4>
+          <p class="text-slate-700 dark:text-zinc-300 text-sm font-medium mt-0.5">
+            Dr. D. Y. Patil College of Engineering & Innovation · Savitribai Phule Pune University (SPPU)
+          </p>
+          <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm mt-3 leading-relaxed">
+            <strong class="text-slate-800 dark:text-zinc-300">Relevant Coursework:</strong> Data Structures & Algorithms, Object-Oriented Programming (OOP), Database Management Systems (DBMS), Operating Systems, Software Engineering & Architecture.
+          </p>
+        </div>
+
+        <!-- Milestone 2: 12th Grade (HSC) - FIXED: Single Year 'Completed 2023' Matching SSC -->
+        <div class="glass-card p-6 sm:p-7 rounded-2xl relative pl-8 sm:pl-10 border-l-4 border-l-slate-400 dark:border-l-zinc-700 bg-white dark:bg-zinc-900/60">
+          <div class="absolute -left-3 top-6 w-5 h-5 rounded-full bg-slate-400 dark:bg-zinc-600 border-4 border-slate-50 dark:border-zinc-950"></div>
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+            <span class="text-xs font-mono text-slate-500 dark:text-zinc-400 font-semibold">COMPLETED 2023</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-mono font-bold text-xs">
+              Score: 78.00%
+            </span>
+          </div>
+          <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+            Higher Secondary Certificate (12th Grade / HSC)
+          </h4>
+          <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm mt-1">
+            Science Stream with rigorous focus in Mathematics, Physics, Chemistry, and Computer Science fundamentals.
+          </p>
+        </div>
+
+        <!-- Milestone 3: 10th Grade (SSC) -->
+        <div class="glass-card p-6 sm:p-7 rounded-2xl relative pl-8 sm:pl-10 border-l-4 border-l-slate-400 dark:border-l-zinc-700 bg-white dark:bg-zinc-900/60">
+          <div class="absolute -left-3 top-6 w-5 h-5 rounded-full bg-slate-400 dark:bg-zinc-600 border-4 border-slate-50 dark:border-zinc-950"></div>
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+            <span class="text-xs font-mono text-slate-500 dark:text-zinc-400 font-semibold">COMPLETED 2021</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 font-mono font-bold text-xs">
+              Distinction: 94.80%
+            </span>
+          </div>
+          <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+            Secondary School Certificate (10th Grade / SSC)
+          </h4>
+          <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm mt-1">
+            Graduated with highest distinction honors and top percentile ranking.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT & HIRE SECTION
+       ========================================================================== -->
+  <section id="contact" class="py-20 bg-slate-100/60 dark:bg-zinc-900/40 border-t border-slate-200/80 dark:border-zinc-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-bold mb-2">// Let's Connect</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Get in Touch</h3>
+        <p class="text-slate-600 dark:text-zinc-400 mt-3 text-sm sm:text-base">
+          I am actively interviewing for <strong class="text-slate-900 dark:text-white">Software Development Engineer (SDE)</strong>, <strong class="text-slate-900 dark:text-white">Full-Stack Java</strong>, and <strong class="text-slate-900 dark:text-white">Backend Engineering</strong> roles with immediate availability.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left: Direct Channels & Instant Actions -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-zinc-800/80 space-y-6 bg-white dark:bg-zinc-950/80">
+            <h4 class="text-xl font-bold text-slate-900 dark:text-white">Contact Information</h4>
+
+            <!-- Channel 1: Email -->
+            <div class="flex items-start space-x-4">
+              <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex-shrink-0">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div class="flex-1">
+                <span class="text-xs text-slate-500 dark:text-zinc-400 block">Email Address</span>
+                <a href="mailto:patilsoham189@gmail.com" class="text-sm font-semibold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                  patilsoham189@gmail.com
+                </a>
+                <button data-copy="patilsoham189@gmail.com" class="text-[11px] text-indigo-600 dark:text-indigo-400 hover:underline flex items-center space-x-1 mt-1 font-mono font-semibold">
+                  <i data-lucide="copy" class="w-3 h-3"></i>
+                  <span>Copy email</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Channel 2: Phone -->
+            <div class="flex items-start space-x-4">
+              <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex-shrink-0">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div class="flex-1">
+                <span class="text-xs text-slate-500 dark:text-zinc-400 block">Mobile Phone</span>
+                <a href="tel:+917823060566" class="text-sm font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                  +91 7823060566
+                </a>
+                <button data-copy="+917823060566" class="text-[11px] text-emerald-600 dark:text-emerald-400 hover:underline flex items-center space-x-1 mt-1 font-mono font-semibold">
+                  <i data-lucide="copy" class="w-3 h-3"></i>
+                  <span>Copy phone number</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Channel 3: Location -->
+            <div class="flex items-start space-x-4">
+              <div class="p-3 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex-shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-500 dark:text-zinc-400 block">Current Location</span>
+                <p class="text-sm font-semibold text-slate-900 dark:text-white">Pune / Pimpri-Chinchwad, India</p>
+                <p class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Open to on-site, hybrid, or remote positions</p>
+              </div>
+            </div>
+
+            <!-- Social Links Grid with Guaranteed SVGs -->
+            <div class="pt-4 border-t border-slate-200 dark:border-zinc-800 flex items-center space-x-3">
+              <a href="https://linkedin.com/in/soham-patil-cs" target="_blank" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200 dark:border-zinc-800 transition-all" title="LinkedIn Profile">
+                <svg class="w-5 h-5 fill-[#0A66C2]" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.97 0 1.75-.79 1.75-1.76s-.78-1.75-1.75-1.75a1.75 1.75 0 0 0-1.75 1.75c0 .97.78 1.76 1.75 1.76m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                </svg>
+              </a>
+              <a href="https://github.com/patilsoham189-cpu" target="_blank" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-zinc-800 transition-all" title="GitHub Profile">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+              <a href="https://leetcode.com/u/Soham416/" target="_blank" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 hover:text-amber-500 border border-slate-200 dark:border-zinc-800 transition-all" title="LeetCode Profile">
+                <svg class="w-5 h-5 fill-[#FFA116]" viewBox="0 0 24 24">
+                  <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.815 3.663 5.92 5.92 0 0 0 3.21-.497 5.973 5.973 0 0 0 1.956-1.498l3.18-3.41 1.97-2.112a1.378 1.378 0 0 0-2.016-1.879l-1.97 2.11-3.18 3.414a3.174 3.174 0 0 1-1.043.798 3.14 3.14 0 0 1-1.706.265 3.155 3.155 0 0 1-2.558-1.947 3.1 3.1 0 0 1-.186-.541 2.94 2.94 0 0 1-.033-1.258 2.8 2.8 0 0 1 .643-1.12l3.854-4.125 5.405-5.787A1.378 1.378 0 0 0 13.483 0zm-2.88 8.44a1.376 1.376 0 0 0-1.377 1.376v.018a1.376 1.376 0 0 0 1.377 1.376h8.286a1.376 1.376 0 0 0 1.377-1.376v-.018a1.376 1.376 0 0 0-1.377-1.376H10.603z"/>
+                </svg>
+              </a>
+              <a href="https://hackerrank.com/profile/patilsoham189" target="_blank" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 hover:text-emerald-500 border border-slate-200 dark:border-zinc-800 transition-all" title="HackerRank Profile">
+                <svg class="w-5 h-5 fill-[#2EC866]" viewBox="0 0 24 24">
+                  <path d="M12 0a12 12 0 1 0 12 12A12.013 12.013 0 0 0 12 0zm3.844 16.32a.6.6 0 0 1-.6.6h-1.68a.6.6 0 0 1-.6-.6v-2.88h-1.928v2.88a.6.6 0 0 1-.6.6h-1.68a.6.6 0 0 1-.6-.6V7.68a.6.6 0 0 1 .6-.6h1.68a.6.6 0 0 1 .6.6v2.88h1.928V7.68a.6.6 0 0 1 .6-.6h1.68a.6.6 0 0 1 .6.6v8.64z"/>
+                </svg>
+              </a>
+              <a href="assets/docs/Soham_Patil_Resume.pdf" download class="inline-flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold ml-auto shadow-md">
+                <i data-lucide="file-down" class="w-4 h-4"></i>
+                <span>Resume PDF</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Interactive Message Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950/80">
+            <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Send a Direct Message</h4>
+            <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm mb-6">Whether you have an internship opening, entry-level role, or just want to discuss backend architecture, I'd love to hear from you.</p>
+
+            <form id="portfolio-contact-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-name" class="block text-xs font-medium text-slate-700 dark:text-zinc-300 mb-1.5">Your Name *</label>
+                  <input type="text" id="contact-name" required placeholder="e.g. Hiring Manager" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors" />
+                </div>
+                <div>
+                  <label for="contact-email" class="block text-xs font-medium text-slate-700 dark:text-zinc-300 mb-1.5">Your Email *</label>
+                  <input type="email" id="contact-email" required placeholder="e.g. recruiter@company.com" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors" />
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-subject" class="block text-xs font-medium text-slate-700 dark:text-zinc-300 mb-1.5">Subject</label>
+                <input type="text" id="contact-subject" placeholder="e.g. Interview Invitation: Full-Stack / SDE Role" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors" />
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs font-medium text-slate-700 dark:text-zinc-300 mb-1.5">Message *</label>
+                <textarea id="contact-message" rows="4" required placeholder="Hello Soham, we were impressed by your GenBank banking application and LeetCode consistency..." class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors"></textarea>
+              </div>
+
+              <button type="submit" class="w-full inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 transition-all transform hover:-translate-y-0.5">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Send Message to Soham</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="py-10 border-t border-slate-200 dark:border-zinc-800/80 bg-slate-100 dark:bg-zinc-950 text-slate-600 dark:text-zinc-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-mono font-bold flex items-center justify-center text-xs">
+          SP
+        </div>
+        <span>&copy; 2026 Soham Patil. Built for high performance & clean architecture.</span>
+      </div>
+
+      <div class="flex items-center space-x-5 font-mono">
+        <a href="#hero" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Back to Top ↑</a>
+        <button class="open-terminal-btn hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center space-x-1">
+          <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+          <span>CLI Console</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: INTERACTIVE DEVELOPER CLI TERMINAL
+       ========================================================================== -->
+  <div id="terminal-modal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+    <div class="modal-content w-full max-w-2xl bg-zinc-950 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl terminal-window">
+      
+      <!-- Terminal Header Bar -->
+      <div class="px-4 py-3 bg-zinc-900 border-b border-zinc-800 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <button id="close-terminal-btn" class="w-3 h-3 rounded-full bg-rose-500 hover:bg-rose-600 focus:outline-none" title="Close Terminal"></button>
+          <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+          <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+          <span class="text-xs font-mono text-zinc-400 ml-2">soham@dev-box:~ (bash)</span>
+        </div>
+        <span class="text-[10px] text-zinc-500 font-mono">Type 'help' for commands</span>
+      </div>
+
+      <!-- Terminal Output Canvas -->
+      <div id="terminal-output" class="p-5 font-mono text-xs sm:text-sm h-80 overflow-y-auto space-y-2 leading-relaxed">
+        <div class="text-zinc-400">
+          <span class="text-indigo-400 font-bold">Welcome to Soham Patil's Interactive Developer Console!</span><br />
+          Type <span class="text-yellow-400 font-bold">help</span> to view all commands, or try <span class="text-emerald-400 font-bold">projects</span>, <span class="text-emerald-400 font-bold">leetcode</span>, or <span class="text-emerald-400 font-bold">sudo hire</span>.
+        </div>
+      </div>
+
+      <!-- Command Line Input Field -->
+      <div class="px-4 py-3 bg-zinc-900/90 border-t border-zinc-800 flex items-center space-x-2">
+        <span class="text-emerald-400 font-bold font-mono text-sm">soham@terminal:~$</span>
+        <input type="text" id="terminal-command-input" autocomplete="off" spellcheck="false" placeholder="type a command (e.g. help, projects, skills)..." class="flex-1 bg-transparent font-mono text-white text-sm focus:outline-none" />
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: GENBANK SYSTEM ARCHITECTURE CASE STUDY
+       ========================================================================== -->
+  <div id="genbank-arch-modal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm overflow-y-auto">
+    <div class="modal-content w-full max-w-3xl bg-zinc-950 text-zinc-100 border border-indigo-500/30 rounded-3xl overflow-hidden shadow-2xl p-6 sm:p-8 space-y-6 my-8 max-h-[90vh] overflow-y-auto">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-zinc-800">
+        <div>
+          <span class="text-xs font-mono text-indigo-400 font-bold uppercase tracking-wider">System Architecture Spec</span>
+          <h3 class="text-2xl font-extrabold text-white">GenBank Core Architecture Deep Dive</h3>
+        </div>
+        <button id="close-arch-modal-btn" class="p-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-6 text-sm text-zinc-300">
+        
+        <!-- Architectural Overview -->
+        <div>
+          <h4 class="font-bold text-white text-base mb-2 flex items-center space-x-2">
+            <i data-lucide="git-branch" class="w-4 h-4 text-indigo-400"></i>
+            <span>1. Concurrency & Double-Entry Ledger</span>
+          </h4>
+          <p class="leading-relaxed text-zinc-400">
+            In financial platforms, race conditions during simultaneous debits/transfers can result in catastrophic double-spending anomalies. GenBank solves this by applying JPA <code class="text-indigo-300 font-mono">@Version</code> optimistic locking on Account entities. Any concurrent modification triggers an <code class="text-amber-400 font-mono">OptimisticLockException</code>, aborting the race and guaranteeing transactional integrity.
+          </p>
+        </div>
+
+        <!-- Microservice Isolation -->
+        <div>
+          <h4 class="font-bold text-white text-base mb-2 flex items-center space-x-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+            <span>2. Decoupled Python FastAPI OTP Service</span>
+          </h4>
+          <p class="leading-relaxed text-zinc-400">
+            To isolate cryptographic verification and reduce core service attack surface, high-value operations trigger a REST payload to an independent <strong class="text-white">Python FastAPI</strong> microservice that generates, manages TTL expiration, and validates one-time authorization tokens.
+          </p>
+        </div>
+
+        <!-- Role Based Access Control -->
+        <div>
+          <h4 class="font-bold text-white text-base mb-2 flex items-center space-x-2">
+            <i data-lucide="lock" class="w-4 h-4 text-violet-400"></i>
+            <span>3. Strict RBAC & Spring Security Model</span>
+          </h4>
+          <p class="leading-relaxed text-zinc-400">
+            Enforces strict separation between customer permissions (account view, fund transfers, statements) and administrative capabilities (account approval, customer KYC audit, transaction reversal) with BCrypt salted hash verification and CSRF token defenses.
+          </p>
+        </div>
+
+        <!-- Automated Reliability & Testing -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-emerald-400">TEST SUITE METRICS</span>
+            <span class="text-xs font-mono text-zinc-400">JUnit 5 + Mockito</span>
+          </div>
+          <p class="text-xs text-zinc-300">
+            23 test suites verifying edge-case transfers, negative balance constraints, rollback guarantees, and mock service failures.
+          </p>
+        </div>
+
+        <!-- Links inside modal -->
+        <div class="pt-2 flex items-center justify-end space-x-3">
+          <a href="https://github.com/patilsoham189-cpu/GenBank" target="_blank" class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            <span>Inspect GenBank on GitHub</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TOAST NOTIFICATION POPUP
+       ========================================================================== -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 flex items-center space-x-2.5 px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white shadow-2xl text-xs sm:text-sm font-medium">
+    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+    <span id="toast-message">Copied!</span>
+  </div>
+
+  <!-- Custom Main JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
