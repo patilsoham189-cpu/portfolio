@@ -307,7 +307,6 @@ function initTerminal() {
         response.innerHTML = `
           <div class="text-sm space-y-1">
             <p>📧 Email: <a href="mailto:patilsoham189@gmail.com" class="text-indigo-400 underline">patilsoham189@gmail.com</a></p>
-            <p>📞 Phone: +91 7823060566</p>
             <p>🌐 LinkedIn: <a href="https://linkedin.com/in/soham-patil-cs" target="_blank" class="text-indigo-400 underline">linkedin.com/in/soham-patil-cs</a></p>
             <p>💻 GitHub: <a href="https://github.com/patilsoham189-cpu" target="_blank" class="text-indigo-400 underline">github.com/patilsoham189-cpu</a></p>
             <p>📍 Location: Pune, Maharashtra, India (Open to Remote / Relocation)</p>
@@ -324,7 +323,7 @@ function initTerminal() {
             <p class="text-white">Let's connect immediately:</p>
             <div class="flex items-center space-x-3 pt-1">
               <a href="mailto:patilsoham189@gmail.com?subject=Interview%20Invitation%20for%20Soham%20Patil" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded text-xs font-semibold">Email Soham Now</a>
-              <a href="tel:+917823060566" class="px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 text-white rounded text-xs">+91 7823060566</a>
+              <a href="https://linkedin.com/in/soham-patil-cs" target="_blank" class="px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 text-white rounded text-xs">LinkedIn Connect</a>
             </div>
           </div>
         `;
